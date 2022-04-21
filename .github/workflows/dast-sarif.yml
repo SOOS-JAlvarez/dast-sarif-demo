@@ -6,7 +6,7 @@ jobs:
     name: A job to test new action
     runs-on: ubuntu-latest
     container:
-      image: soosio/dast:beta
+      image: soosio/dast:alhpa-4
     steps:
       - name: Run SOOS DAST Analysis
         id: soos-dast-analysis
