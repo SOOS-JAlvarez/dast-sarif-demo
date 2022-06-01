@@ -21,4 +21,4 @@ jobs:
       - name: Upload SOOS DAST Report
         uses: github/codeql-action/upload-sarif@v2
         with:
-          sarif_file: /zap/results.sarif
+          sarif_file: results.sarif
