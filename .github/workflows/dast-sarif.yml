@@ -8,7 +8,7 @@ jobs:
     name: SOOS DAST Baseline Analysis
     runs-on: ubuntu-latest
     steps:
-      - name: Run SOOS DAST Analysis
+      - name: Run SOOS DAST Analysis Test
         uses: soos-io/soos-dast-github-action@feature/PA-5101
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
