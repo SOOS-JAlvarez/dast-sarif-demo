@@ -18,3 +18,7 @@ jobs:
           api_url: "https://qa-api.soos.io/api/"
           target_url: "https://brokencrystals.com/"
           sarif: true
+      - name: Upload Anchore Scan Report
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: results.sarif
