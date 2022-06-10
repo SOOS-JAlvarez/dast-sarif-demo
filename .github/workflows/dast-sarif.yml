@@ -8,6 +8,8 @@ jobs:
     name: SOOS DAST Baseline Analysis
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout the code
+        uses: actions/checkout@v3
       - name: Run SOOS DAST Analysis Test2
         uses: soos-io/soos-dast-github-action@feature/PA-5101
         with:
