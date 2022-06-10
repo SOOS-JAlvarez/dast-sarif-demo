@@ -4,14 +4,14 @@ name: SOOS DAST GitHub Actions
 on: [push]
 
 jobs:
-  soos_dast_analysis_example:
-    name: SOOS DAST Baseline Analysis
+  soos:
+    permissions:
+      security-events: write # for uploading code scanning alert info
+    name: SOOS DAST Scan
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v3
-      - name: Run SOOS DAST Analysis Test2
-        uses: soos-io/soos-dast-github-action@feature/PA-5101
+      - name: Run SOOS DAST Scan
+        uses: soos-io/soos-dast-github-action@5f8c23ccf8366ea0a58deeb5c804e0524267df43
         with:
           client_id: ${{ secrets.SOOS_CLIENT_ID }}
           api_key: ${{ secrets.SOOS_API_KEY }}
